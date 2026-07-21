@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omoniyi Praise — Content &amp; Digital Marketing Strategist</title>
+<meta name="description" content="Content and digital marketing strategist building campaigns that drive acquisition, engagement and brand growth for fintech and banking. 4+ years across the ALAT ecosystem and beyond.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2E2019;          /* deep espresso — replaces near-black */
+  --paper:#F3EBE0;        /* warm nude/oat background */
+  --paper-2:#E8DCCB;      /* deeper sand for alternating sections */
+  --signal:#B57A4E;       /* caramel/terracotta accent */
+  --signal-deep:#8A5A34;  /* rich walnut — for text-weight accents */
+  --violet:#6E4A32;       /* secondary brown */
+  --line:rgba(46,32,25,.15);
+  --muted:#6B5A4D;
+  --display:'Fraunces',Georgia,serif;
+  --sans:'Space Grotesk',system-ui,sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--signal);color:var(--ink)}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+
+/* ---------- NAV ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  backdrop-filter:blur(10px);
+  background:rgba(243,235,224,.75);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s;
+}
+nav.scrolled{border-color:var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--mono);font-weight:700;font-size:15px;letter-spacing:-.02em;display:flex;align-items:center;gap:9px}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:var(--signal);box-shadow:0 0 0 4px rgba(181,122,78,.28)}
+.navlinks{display:flex;gap:30px;font-size:14px;font-weight:500}
+.navlinks a{color:var(--muted);transition:color .2s;position:relative}
+.navlinks a:hover{color:var(--ink)}
+.nav-cta{padding:9px 18px;border:1.5px solid var(--ink);border-radius:100px;font-weight:600;color:var(--ink)!important;transition:.2s}
+.nav-cta:hover{background:var(--ink);color:var(--paper)!important}
+.menu-btn{display:none;background:none;border:none;font-family:var(--mono);font-size:13px;cursor:pointer;color:var(--ink)}
+
+/* ---------- HERO ---------- */
+header{padding:150px 0 70px;position:relative}
+.hero-wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero-copy{min-width:0}
+.hero-portrait{position:relative;justify-self:end;width:100%;max-width:420px}
+.hero-portrait img{width:100%;height:auto;display:block;border-radius:20px;object-fit:cover;box-shadow:0 30px 60px -24px rgba(46,32,25,.5)}
+.hero-portrait::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1.5px solid var(--signal);border-radius:20px;z-index:-1}
+.portrait-badge{position:absolute;left:16px;bottom:16px;background:rgba(46,32,25,.82);color:var(--paper);font-family:var(--mono);font-size:12px;letter-spacing:.03em;padding:8px 14px;border-radius:100px;backdrop-filter:blur(4px)}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--signal-deep);font-weight:500;display:flex;align-items:center;gap:12px;margin-bottom:30px}
+.eyebrow::before{content:"";width:34px;height:1.5px;background:var(--signal-deep)}
+h1.hero{
+  font-family:var(--display);
+  font-weight:400;
+  font-size:clamp(2.7rem,6.6vw,5.6rem);
+  line-height:1.02;
+  letter-spacing:-.025em;
+  max-width:15ch;
+}
+h1.hero em{font-style:italic;color:var(--signal-deep)}
+h1.hero .u{position:relative;white-space:nowrap}
+h1.hero .u::after{content:"";position:absolute;left:0;right:0;bottom:.08em;height:.09em;background:var(--signal)}
+.hero-sub{max-width:52ch;margin-top:32px;font-size:clamp(1.05rem,2vw,1.28rem);color:var(--muted);line-height:1.55}
+.hero-sub strong{color:var(--ink);font-weight:600}
+.hero-actions{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap}
+.btn{padding:15px 28px;border-radius:100px;font-weight:600;font-size:15px;transition:.22s;display:inline-flex;align-items:center;gap:9px;cursor:pointer;border:1.5px solid var(--ink)}
+.btn-solid{background:var(--ink);color:var(--paper)}
+.btn-solid:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(46,32,25,.45)}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+.btn .arrow{transition:transform .22s}
+.btn:hover .arrow{transform:translate(3px,-3px)}
+
+/* ticker of domains */
+.ticker{margin-top:64px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;overflow:hidden}
+.ticker-track{display:flex;gap:52px;font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--muted);white-space:nowrap;animation:scroll 26s linear infinite;width:max-content}
+.ticker-track span{display:flex;align-items:center;gap:52px}
+.ticker-track b{color:var(--ink);font-weight:500}
+.ticker-track i{color:var(--signal-deep);font-style:normal}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ---------- SECTION SHELL ---------- */
+section{padding:96px 0;position:relative}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:52px;flex-wrap:wrap}
+.sec-num{font-family:var(--mono);font-size:13px;color:var(--signal-deep);font-weight:500}
+.sec-title{font-family:var(--display);font-size:clamp(1.9rem,4vw,2.9rem);font-weight:400;letter-spacing:-.02em;line-height:1.05}
+.sec-desc{color:var(--muted);max-width:46ch;font-size:16px;margin-left:auto}
+
+/* ---------- STATS STRIP ---------- */
+.stats{background:var(--ink);color:var(--paper);border-radius:22px;padding:8px;margin-top:8px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:34px 28px;border-right:1px solid rgba(243,235,224,.12)}
+.stat:last-child{border-right:none}
+.stat .n{font-family:var(--display);font-size:clamp(2.1rem,4vw,3rem);font-weight:500;letter-spacing:-.02em;line-height:1}
+.stat .n em{color:var(--signal);font-style:normal}
+.stat .l{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(243,235,224,.6);margin-top:12px;line-height:1.4}
+
+/* ---------- WORK / CASE STUDIES ---------- */
+.cases{display:grid;gap:22px}
+.case{
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:38px;
+  background:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,0));
+  transition:.3s;
+  position:relative;
+  overflow:hidden;
+}
+.case:hover{border-color:var(--ink);transform:translateY(-3px)}
+.case-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;margin-bottom:22px}
+.case-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--signal-deep);border:1px solid var(--signal-deep);border-radius:100px;padding:5px 13px;font-weight:500}
+.case-role{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.case h3{font-family:var(--display);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:500;letter-spacing:-.02em;line-height:1.08;max-width:22ch}
+.case-body{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:26px}
+.case-block h4{font-family:var(--mono);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:9px;font-weight:500}
+.case-block p{font-size:15.5px;line-height:1.58;color:#4A3B30}
+.case-results{grid-column:1 / -1;display:flex;gap:16px;flex-wrap:wrap;margin-top:6px;padding-top:26px;border-top:1px solid var(--line)}
+.result-chip{background:var(--paper-2);border-radius:12px;padding:14px 20px;min-width:120px}
+.result-chip .rn{font-family:var(--display);font-size:1.7rem;font-weight:600;letter-spacing:-.02em;line-height:1}
+.result-chip .rn em{color:var(--signal-deep);font-style:normal}
+.result-chip .rl{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.35}
+
+/* ---------- SERVICES ---------- */
+#services{background:var(--paper-2)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.svc{background:var(--paper-2);padding:34px 30px;transition:.25s}
+.svc:hover{background:var(--paper)}
+.svc-ix{font-family:var(--mono);font-size:12px;color:var(--signal-deep);font-weight:500}
+.svc h3{font-family:var(--display);font-size:1.35rem;font-weight:500;margin:16px 0 12px;letter-spacing:-.01em}
+.svc p{font-size:15px;color:var(--muted);line-height:1.55}
+
+/* ---------- PRESS ---------- */
+.press-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.press{border:1px solid var(--line);border-radius:16px;padding:26px 28px;transition:.25s;display:block}
+.press:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.press:hover .press-meta,.press:hover .press-arrow{color:rgba(243,235,224,.65)}
+.press-meta{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.press-meta .src{color:var(--signal-deep);font-weight:500}
+.press:hover .press-meta .src{color:var(--signal)}
+.press h4{font-size:17px;font-weight:600;line-height:1.35;letter-spacing:-.01em}
+.press-arrow{font-family:var(--mono);font-size:13px;color:var(--muted);margin-top:16px;display:inline-flex;align-items:center;gap:6px}
+
+/* ---------- ABOUT ---------- */
+#about .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.about-card{border:1px solid var(--line);border-radius:20px;padding:34px;position:sticky;top:100px;background:linear-gradient(180deg,rgba(255,255,255,.6),transparent)}
+.about-card .avatar{width:64px;height:64px;border-radius:16px;overflow:hidden;background:var(--ink)}
+.about-card .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.about-card h3{font-family:var(--display);font-size:1.5rem;margin:20px 0 4px;font-weight:500}
+.about-card .titleline{font-family:var(--mono);font-size:12.5px;color:var(--signal-deep);letter-spacing:.02em}
+.about-meta{margin-top:24px;border-top:1px solid var(--line);padding-top:20px;display:grid;gap:14px}
+.about-meta .row{display:flex;justify-content:space-between;font-size:14px}
+.about-meta .row span:first-child{color:var(--muted);font-family:var(--mono);font-size:12px}
+.about-meta .row span:last-child{font-weight:500;text-align:right}
+.about-prose p{font-family:var(--display);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.42;font-weight:400;letter-spacing:-.01em}
+.about-prose p + p{margin-top:26px}
+.about-prose em{font-style:italic;color:var(--signal-deep)}
+.skills{margin-top:38px;display:flex;flex-wrap:wrap;gap:10px}
+.skill{font-family:var(--mono);font-size:12.5px;padding:8px 15px;border:1px solid var(--line);border-radius:100px;color:#4A3B30}
+
+/* ---------- CONTACT ---------- */
+#contact{background:var(--ink);color:var(--paper)}
+#contact .eyebrow{color:var(--signal)}
+#contact .eyebrow::before{background:var(--signal)}
+.contact-h{font-family:var(--display);font-size:clamp(2.4rem,6vw,4.6rem);font-weight:400;letter-spacing:-.025em;line-height:1.02;max-width:16ch}
+.contact-h em{font-style:italic;color:var(--signal)}
+.contact-links{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap}
+.clink{padding:15px 26px;border:1.5px solid rgba(243,235,224,.3);border-radius:100px;font-weight:600;font-size:15px;transition:.22s;display:inline-flex;align-items:center;gap:10px}
+.clink:hover{background:var(--signal);color:var(--ink);border-color:var(--signal)}
+.clink.primary{background:var(--signal);color:var(--ink);border-color:var(--signal)}
+.clink.primary:hover{background:transparent;color:var(--paper);border-color:rgba(243,235,224,.3)}
+footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32px;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:12.5px;color:rgba(243,235,224,.55);flex-wrap:wrap;gap:16px}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:860px){
+  .hero-wrap{grid-template-columns:1fr;gap:36px}
+  .hero-portrait{justify-self:start;max-width:300px;order:-1}
+  .hero-portrait::before{inset:10px -10px -10px 10px}
+  .navlinks{display:none}
+  .menu-btn{display:block}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:none}
+  .stat{border-bottom:1px solid rgba(243,235,224,.12)}
+  .stat:nth-child(3),.stat:nth-child(4){border-bottom:none}
+  .case-body{grid-template-columns:1fr;gap:22px}
+  .svc-grid{grid-template-columns:1fr}
+  .press-grid{grid-template-columns:1fr}
+  #about .wrap{grid-template-columns:1fr;gap:36px}
+  .about-card{position:static}
+  .sec-desc{margin-left:0}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><span class="dot"></span>OMONIYI&nbsp;PRAISE</a>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#press">Press</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+    <button class="menu-btn" onclick="document.getElementById('work').scrollIntoView()">Menu ↓</button>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap hero-wrap">
+    <div class="hero-copy">
+      <div class="eyebrow reveal">Content &amp; Digital Marketing Strategist</div>
+      <h1 class="hero reveal">I build campaigns that move <span class="u">numbers</span>, not just <em>impressions.</em></h1>
+      <p class="hero-sub reveal">Marketing &amp; communications specialist with <strong>4+ years across fintech, banking and tech.</strong> I turn brand strategy into measurable growth — acquisition, engagement, and adoption — for digital products in one of Africa's most competitive markets.</p>
+      <div class="hero-actions reveal">
+        <a href="#work" class="btn btn-solid">See the work <span class="arrow">↗</span></a>
+        <a href="#contact" class="btn btn-ghost">Work with me</a>
+      </div>
+    </div>
+    <div class="hero-portrait reveal">
+      <img src="portrait.jpg" alt="Omoniyi Praise" width="1000" height="1250">
+      <span class="portrait-badge">Omoniyi Praise</span>
+    </div>
+  </div>
+  <div class="ticker reveal">
+    <div class="ticker-track">
+      <span><b>Campaign Strategy</b><i>◆</i><b>Digital Product Marketing</b><i>◆</i><b>Performance Reporting</b><i>◆</i><b>Content Production</b><i>◆</i><b>Internal Comms</b><i>◆</i><b>SME Acquisition</b><i>◆</i><b>Paid Social</b><i>◆</i></span>
+      <span><b>Campaign Strategy</b><i>◆</i><b>Digital Product Marketing</b><i>◆</i><b>Performance Reporting</b><i>◆</i><b>Content Production</b><i>◆</i><b>Internal Comms</b><i>◆</i><b>SME Acquisition</b><i>◆</i><b>Paid Social</b><i>◆</i></span>
+    </div>
+  </div>
+</header>
+
+<section id="metrics" style="padding-top:20px">
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stats-grid">
+        <div class="stat"><div class="n"><em>4</em>M</div><div class="l">App migrations driven<br>in 3 months</div></div>
+        <div class="stat"><div class="n">4.8<em>M</em></div><div class="l">POS transactions from<br>one campaign</div></div>
+        <div class="stat"><div class="n">90<em>%</em></div><div class="l">Surge in platform<br>traffic</div></div>
+        <div class="stat"><div class="n">4<em>+</em></div><div class="l">Years across fintech,<br>banking &amp; tech</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-card reveal">
+      <div class="avatar"><img src="avatar.jpg" alt="Omoniyi Praise" width="480" height="480"></div>
+      <h3>Omoniyi Praise</h3>
+      <div class="titleline">Content &amp; Digital Marketing Strategist</div>
+      <div class="about-meta">
+        <div class="row"><span>Focus</span><span>Fintech · Banking · Tech</span></div>
+        <div class="row"><span>Experience</span><span>4+ years</span></div>
+        <div class="row"><span>Base</span><span>Lagos, Nigeria</span></div>
+        <div class="row"><span>Worked with</span><span>Wema · ALAT · Simfy</span></div>
+      </div>
+      <div class="skills">
+        <span class="skill">GA4</span>
+        <span class="skill">Meta Ads</span>
+        <span class="skill">Meltwater</span>
+        <span class="skill">Ahrefs</span>
+        <span class="skill">SEO</span>
+        <span class="skill">Campaign Strategy</span>
+        <span class="skill">Copywriting</span>
+        <span class="skill">Email &amp; Automation</span>
+      </div>
+    </div>
+    <div class="about-prose reveal">
+      <div class="sec-head" style="margin-bottom:32px">
+        <span class="sec-num">01</span>
+        <h2 class="sec-title">About</h2>
+      </div>
+      <p>I'm a marketing and communications specialist who works at the seam between <em>brand and business</em> — where a campaign idea has to survive contact with a KPI.</p>
+      <p>Across 4+ years in fintech, banking and tech, I've marketed digital products to audiences as different as teenagers opening their first account and women running businesses out of Instagram DMs. I run the full arc: strategy, the content that carries it, and the reporting that proves whether it worked.</p>
+      <p>My work lives on the ALAT ecosystem — campaign strategy, performance reporting, internal comms and content production — but the method travels: <em>understand the audience, sharpen the positioning, ship, measure, adjust.</em></p>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">Selected work</h2>
+      <p class="sec-desc">Strategy first, results in view. A few campaigns where the thinking behind the work is the point.</p>
+    </div>
+
+    <div class="cases">
+
+      <!-- CASE 1 -->
+      <article class="case reveal">
+        <div class="case-top">
+          <span class="case-tag">Product Launch · Migration</span>
+          <span class="case-role">Campaign lead · Comms · Content</span>
+        </div>
+        <h3>ALAT: The Evolution — migrating a bank's entire app base</h3>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>Challenge</h4>
+            <p>Wema Bank rebuilt ALAT from the ground up. The hard part wasn't the build — it was moving millions of existing customers onto the new app without losing them, and winning new users at the same time.</p>
+          </div>
+          <div class="case-block">
+            <h4>Approach</h4>
+            <p>Spearheaded the launch campaign for ALAT: The Evolution — integrated messaging across digital and traditional channels, built to make the migration feel like an upgrade worth making rather than a chore to endure.</p>
+          </div>
+          <div class="case-results">
+            <div class="result-chip"><div class="rn"><em>4</em>M</div><div class="rl">Customer migrations in 3 months</div></div>
+            <div class="result-chip"><div class="rn"><em>1</em>M</div><div class="rl">New users in the same window</div></div>
+            <div class="result-chip"><div class="rn">3</div><div class="rl">Months to full-scale migration</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 2 -->
+      <article class="case reveal">
+        <div class="case-top">
+          <span class="case-tag">Integrated Campaign · Engagement</span>
+          <span class="case-role">Campaign owner · Strategy · Content</span>
+        </div>
+        <h3>Anniversary &amp; Hackaholics — turning brand moments into transactions</h3>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>Challenge</h4>
+            <p>Brand campaigns are easy to run and hard to justify — the pressure was to make anniversary and innovation moments (Sounds of ALAT, ALAT Alumni, Hackaholics 2024) do real commercial work, not just earn applause.</p>
+          </div>
+          <div class="case-block">
+            <h4>Approach</h4>
+            <p>Owned and planned these integrated campaigns end-to-end, tying storytelling to a transactional call to action and pushing for national reach across geo-political zones — so the emotion converted into POS activity and platform traffic.</p>
+          </div>
+          <div class="case-results">
+            <div class="result-chip"><div class="rn">4.8<em>M</em>+</div><div class="rl">POS transactions (anniversary)</div></div>
+            <div class="result-chip"><div class="rn">3.4<em>M</em>+</div><div class="rl">POS transactions (Hackaholics)</div></div>
+            <div class="result-chip"><div class="rn"><em>90</em>%</div><div class="rl">Surge in alat.ng traffic</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 3 -->
+      <article class="case reveal">
+        <div class="case-top">
+          <span class="case-tag">Growth Marketing · Crypto</span>
+          <span class="case-role">Multi-channel · Paid media · Content</span>
+        </div>
+        <h3>Simfy — growing a crypto platform through clarity</h3>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>Challenge</h4>
+            <p>Crypto and digital-banking concepts intimidate the everyday user. Simfy needed active users, retention and conversions — which meant making a complex product feel simple enough to act on.</p>
+          </div>
+          <div class="case-block">
+            <h4>Approach</h4>
+            <p>Ran multi-channel integrated campaigns — social, email, partnerships, in-app, and targeted Meta ads — while simplifying dense crypto ideas into push notifications, newsletters and blogs. Owned the content calendar and SEO-aligned pages, optimising continuously against KPIs.</p>
+          </div>
+          <div class="case-results">
+            <div class="result-chip"><div class="rn"><em>30</em>%</div><div class="rl">Increase in active users</div></div>
+            <div class="result-chip"><div class="rn"><em>3</em>×</div><div class="rl">Higher engagement</div></div>
+            <div class="result-chip"><div class="rn"><em>35</em>%</div><div class="rl">Lift in click-through rate</div></div>
+            <div class="result-chip"><div class="rn"><em>40</em>%</div><div class="rl">Follower growth in 3 months</div></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 4 -->
+      <article class="case reveal">
+        <div class="case-top">
+          <span class="case-tag">Brand · Financial Literacy</span>
+          <span class="case-role">Activation · Content · Comms</span>
+        </div>
+        <h3>Money Adventure — teaching a thousand kids about money</h3>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>Challenge</h4>
+            <p>Financial literacy is hard to make exciting for children, and easy to reduce to a forgettable school visit. The brand needed an activation that actually landed with young students and produced content worth sharing.</p>
+          </div>
+          <div class="case-block">
+            <h4>Approach</h4>
+            <p>Executed the Money Adventure School Tour across six schools — designing financial-literacy activations and content that reached over a thousand students, turning a CSR obligation into a genuine brand moment. (I also led the internal comms behind Wema's Great Place to Work recognition.)</p>
+          </div>
+          <div class="case-results">
+            <div class="result-chip"><div class="rn">1,000<em>+</em></div><div class="rl">Students reached</div></div>
+            <div class="result-chip"><div class="rn">6</div><div class="rl">Schools on the tour</div></div>
+            <div class="result-chip"><div class="rn">1<em>st</em></div><div class="rl">Great Place to Work award (comms lead)</div></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">What I do</h2>
+      <p class="sec-desc">Four practices that connect the brief to the number it's supposed to move.</p>
+    </div>
+    <div class="svc-grid reveal">
+      <div class="svc">
+        <div class="svc-ix">S/01</div>
+        <h3>Campaign strategy</h3>
+        <p>Positioning, audience segmentation, channel mix and go-to-market — from competitive intelligence to a deck that gets buy-in and ships.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ix">S/02</div>
+        <h3>Digital product marketing</h3>
+        <p>Launch and growth comms for digital products, tuned to each audience — teens, SMEs, women-led businesses, everyday users.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ix">S/03</div>
+        <h3>Performance reporting</h3>
+        <p>Promise-vs-results scorecards, KPI tracking and analytical narrative — pulling Meltwater, GA4 and platform data into decisions.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ix">S/04</div>
+        <h3>Content production</h3>
+        <p>Campaign copy, editorial, flyers, scripts and decks — content built to be read, remembered and acted on.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ix">S/05</div>
+        <h3>Internal communications</h3>
+        <p>Rally campaigns and enablement that get whole divisions moving toward a shared, measurable target.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ix">S/06</div>
+        <h3>Brand &amp; comms</h3>
+        <p>Press-ready storytelling and brand messaging that expands reach and protects reputation across earned media.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="press">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">In the press</h2>
+      <p class="sec-desc">Selected campaigns and launches that earned national coverage.</p>
+    </div>
+    <div class="press-grid reveal">
+      <a class="press" href="https://businessday.ng/companies/article/wema-bank-unveils-80th-anniversary-identity/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">BusinessDay</span><span>·</span><span>2025</span></div>
+        <h4>Wema Bank unveils its 80th anniversary identity</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://www.thisdaylive.com/2025/12/19/wema-at-80-legacy-of-stability-growth-long-term-returns-for-shareholders/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">ThisDay</span><span>·</span><span>2025</span></div>
+        <h4>Wema at 80: a legacy of stability, growth and long-term shareholder returns</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://punchng.com/wema-bank-80-the-journey-of-resilience-innovation-adaptability-and-strategic-vision-from-1945-2025/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">Punch</span><span>·</span><span>2025</span></div>
+        <h4>Wema Bank 80: resilience, innovation and strategic vision, 1945–2025</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://punchng.com/from-agbonmagbe-to-wema-bank-nigerias-fifth-oldest-bank-marks-79th-birthday/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">Punch</span><span>·</span><span>2025</span></div>
+        <h4>From Agbonmagbe to Wema Bank — Nigeria's fifth-oldest bank marks a milestone</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://www.thisdaylive.com/index.php/2025/02/11/wema-banks-transformational-journey-story-of-vision-resilience-and-innovation/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">ThisDay</span><span>·</span><span>Feb 2025</span></div>
+        <h4>Wema Bank's transformational journey: vision, resilience and innovation</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://www.thisdaylive.com/index.php/2025/02/23/banking-across-decades-celebrating-wema-banks-key-milestones-at-80/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">ThisDay</span><span>·</span><span>Feb 2025</span></div>
+        <h4>Banking across decades: celebrating Wema Bank's key milestones at 80</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://guardian.ng/issue/wema-at-80-rising-to-the-top-of-nigerian-banking-industry/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">Guardian</span><span>·</span><span>2025</span></div>
+        <h4>Wema at 80: rising to the top of the Nigerian banking industry</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://independent.ng/strongest-at-its-oldest-the-story-of-nigerias-oldest-indigenous-bank-at-80/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">Independent</span><span>·</span><span>2025</span></div>
+        <h4>Strongest at its oldest: the story of Nigeria's oldest indigenous bank at 80</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://thenationonlineng.net/the-scars-that-beautify-our-stories-by-wema-bank-80/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">The Nation</span><span>·</span><span>2025</span></div>
+        <h4>"The scars that beautify our stories" — Wema Bank at 80</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://businessday.ng/companies/article/wema-bank-80-year-journey-of-transformation/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">BusinessDay</span><span>·</span><span>2025</span></div>
+        <h4>Wema Bank: an 80-year journey of transformation</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+      <a class="press" href="https://thescript.com.ng/80-years-of-banking-heritage-wema-banks-commitment-to-excellence/" target="_blank" rel="noopener">
+        <div class="press-meta"><span class="src">The Script</span><span>·</span><span>2025</span></div>
+        <h4>80 years of banking heritage: Wema Bank's commitment to excellence</h4>
+        <span class="press-arrow">Read ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="wrap">
+    <div class="eyebrow reveal">Let's talk</div>
+    <h2 class="contact-h reveal">Got a product that needs a <em>strategy</em> and a story?</h2>
+    <div class="contact-links reveal">
+      <a class="clink primary" href="mailto:praiseoluwashetemi@gmail.com">Email me ↗</a>
+      <a class="clink" href="tel:+2349077265216">Call ↗</a>
+      <a class="clink" href="https://www.linkedin.com/in/omoniyioluwashetemi" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="clink" href="Omoniyi_Praise_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    </div>
+    <footer>
+      <span>© 2026 Omoniyi Praise — Content &amp; Digital Marketing Strategist</span>
+      <span>Built to move numbers.</span>
+    </footer>
+  </div>
+</section>
+
+<script>
+// nav border on scroll
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
+// reveal on scroll
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*60)+'ms';io.observe(el)});
+</script>
+</body>
+</html>
