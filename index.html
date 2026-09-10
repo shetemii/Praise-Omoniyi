@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omoniyi Praise — Content &amp; Digital Marketing Strategist</title>
-<meta name="description" content="Content and digital marketing strategist building campaigns that drive acquisition, engagement and brand growth for fintech and banking. 4+ years across the ALAT ecosystem and beyond.">
+<title>Omoniyi Praise: Content &amp; Digital Marketing Strategist</title>
+<meta name="description" content="Content and digital marketing strategist building campaigns that drive acquisition, engagement and brand growth for fintech and banking. 5+ years across the ALAT ecosystem and beyond.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#2E2019;          /* deep espresso — replaces near-black */
+  --ink:#2E2019;          /* deep espresso, replaces near-black */
   --paper:#F3EBE0;        /* warm nude/oat background */
   --paper-2:#E8DCCB;      /* deeper sand for alternating sections */
   --signal:#B57A4E;       /* caramel/terracotta accent */
-  --signal-deep:#8A5A34;  /* rich walnut — for text-weight accents */
+  --signal-deep:#8A5A34;  /* rich walnut, for text-weight accents */
   --violet:#6E4A32;       /* secondary brown */
   --line:rgba(46,32,25,.15);
   --muted:#6B5A4D;
@@ -88,6 +88,8 @@ h1.hero .u::after{content:"";position:absolute;left:0;right:0;bottom:.08em;heigh
 .btn-ghost:hover{background:var(--ink);color:var(--paper)}
 .btn .arrow{transition:transform .22s}
 .btn:hover .arrow{transform:translate(3px,-3px)}
+.hero-creds{margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+.hero-creds b{color:var(--signal-deep);font-weight:500}
 
 /* ticker of domains */
 .ticker{margin-top:64px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;overflow:hidden}
@@ -140,12 +142,39 @@ section{padding:96px 0;position:relative}
 
 /* ---------- SERVICES ---------- */
 #services{background:var(--paper-2)}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.svc{background:var(--paper-2);padding:34px 30px;transition:.25s}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.svc{background:var(--paper-2);padding:30px 26px;transition:.25s}
 .svc:hover{background:var(--paper)}
 .svc-ix{font-family:var(--mono);font-size:12px;color:var(--signal-deep);font-weight:500}
-.svc h3{font-family:var(--display);font-size:1.35rem;font-weight:500;margin:16px 0 12px;letter-spacing:-.01em}
-.svc p{font-size:15px;color:var(--muted);line-height:1.55}
+.svc h3{font-family:var(--display);font-size:1.2rem;font-weight:500;margin:14px 0 10px;letter-spacing:-.01em}
+.svc p{font-size:14.5px;color:var(--muted);line-height:1.55}
+
+/* ---------- EXPERIENCE / TIMELINE ---------- */
+#experience{background:var(--paper)}
+.timeline{position:relative;padding-left:2px}
+.timeline::before{content:"";position:absolute;left:7px;top:10px;bottom:10px;width:1.5px;background:var(--line)}
+.tl-item{position:relative;padding:0 0 44px 44px}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:1.5px solid var(--signal-deep)}
+.tl-item.current .tl-dot{background:var(--signal-deep)}
+.tl-head{display:flex;justify-content:space-between;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:6px}
+.tl-role{font-family:var(--display);font-size:1.35rem;font-weight:500;letter-spacing:-.01em}
+.tl-org{color:var(--signal-deep);font-weight:500}
+.tl-period{font-family:var(--mono);font-size:12.5px;color:var(--muted);white-space:nowrap}
+.tl-sub{margin-top:16px;display:grid;gap:14px}
+.tl-role-item{border-left:1.5px solid var(--line);padding-left:18px}
+.tl-role-item .trh{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--signal-deep);margin-bottom:5px}
+.tl-role-item .trh span:last-child{color:var(--muted)}
+.tl-role-item p{font-size:15px;color:#4A3B30;line-height:1.55;max-width:64ch}
+.tl-item > p{font-size:15px;color:#4A3B30;line-height:1.58;max-width:64ch;margin-top:6px}
+
+/* ---------- CREDENTIALS ---------- */
+#credentials{background:var(--paper-2)}
+.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cred{border:1px solid var(--line);border-radius:16px;padding:26px 26px 24px;background:var(--paper)}
+.cred .cred-org{font-family:var(--display);font-size:1.2rem;font-weight:500;letter-spacing:-.01em;margin-top:12px}
+.cred .cred-name{font-family:var(--mono);font-size:12.5px;color:var(--signal-deep);letter-spacing:.02em}
+.cred .cred-year{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:10px}
 
 /* ---------- PRESS ---------- */
 .press-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -166,14 +195,18 @@ section{padding:96px 0;position:relative}
 .about-card h3{font-family:var(--display);font-size:1.5rem;margin:20px 0 4px;font-weight:500}
 .about-card .titleline{font-family:var(--mono);font-size:12.5px;color:var(--signal-deep);letter-spacing:.02em}
 .about-meta{margin-top:24px;border-top:1px solid var(--line);padding-top:20px;display:grid;gap:14px}
-.about-meta .row{display:flex;justify-content:space-between;font-size:14px}
-.about-meta .row span:first-child{color:var(--muted);font-family:var(--mono);font-size:12px}
+.about-meta .row{display:flex;justify-content:space-between;font-size:14px;gap:14px}
+.about-meta .row span:first-child{color:var(--muted);font-family:var(--mono);font-size:12px;white-space:nowrap}
 .about-meta .row span:last-child{font-weight:500;text-align:right}
 .about-prose p{font-family:var(--display);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.42;font-weight:400;letter-spacing:-.01em}
 .about-prose p + p{margin-top:26px}
 .about-prose em{font-style:italic;color:var(--signal-deep)}
 .skills{margin-top:38px;display:flex;flex-wrap:wrap;gap:10px}
 .skill{font-family:var(--mono);font-size:12.5px;padding:8px 15px;border:1px solid var(--line);border-radius:100px;color:#4A3B30}
+.about-cards{margin-top:38px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.acard{border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:rgba(255,255,255,.4)}
+.acard .al{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--signal-deep);margin-bottom:6px}
+.acard .av{font-size:14.5px;font-weight:500}
 
 /* ---------- CONTACT ---------- */
 #contact{background:var(--ink);color:var(--paper)}
@@ -204,11 +237,14 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
   .stat{border-bottom:1px solid rgba(243,235,224,.12)}
   .stat:nth-child(3),.stat:nth-child(4){border-bottom:none}
   .case-body{grid-template-columns:1fr;gap:22px}
-  .svc-grid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr 1fr}
   .press-grid{grid-template-columns:1fr}
   #about .wrap{grid-template-columns:1fr;gap:36px}
   .about-card{position:static}
+  .about-cards{grid-template-columns:1fr}
   .sec-desc{margin-left:0}
+  .cred-grid{grid-template-columns:1fr}
+  .tl-head{flex-direction:column;align-items:flex-start;gap:4px}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;scroll-behavior:auto!important}
@@ -224,6 +260,7 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
     <div class="navlinks">
       <a href="#about">About</a>
       <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
       <a href="#services">Services</a>
       <a href="#press">Press</a>
     </div>
@@ -235,13 +272,14 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
 <header id="top">
   <div class="wrap hero-wrap">
     <div class="hero-copy">
-      <div class="eyebrow reveal">Content &amp; Digital Marketing Strategist</div>
-      <h1 class="hero reveal">I build campaigns that move <span class="u">numbers</span>, not just <em>impressions.</em></h1>
-      <p class="hero-sub reveal">Marketing &amp; communications specialist with <strong>4+ years across fintech, banking and tech.</strong> I turn brand strategy into measurable growth — acquisition, engagement, and adoption — for digital products in one of Africa's most competitive markets.</p>
+      <div class="eyebrow reveal">Digital Marketing &amp; Campaign Manager</div>
+      <h1 class="hero reveal">Ideas don't mean much until someone <span class="u">executes</span> them.</h1>
+      <p class="hero-sub reveal">I plan, build, and run full-funnel marketing campaigns: content, social, email, SMS, and events, then track the metrics that matter so the next one converts even better. <strong>5+ years across fintech, banking and tech.</strong></p>
       <div class="hero-actions reveal">
-        <a href="#work" class="btn btn-solid">See the work <span class="arrow">↗</span></a>
-        <a href="#contact" class="btn btn-ghost">Work with me</a>
+        <a href="#work" class="btn btn-solid">See my work <span class="arrow">↗</span></a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
       </div>
+      <div class="hero-creds reveal"><b>ANIPR</b> &nbsp;·&nbsp; MBA in Marketing &nbsp;·&nbsp; B.Sc(Ed) Building Technology</div>
     </div>
     <div class="hero-portrait reveal">
       <img src="portrait.jpg" alt="Omoniyi Praise" width="1000" height="1250">
@@ -250,8 +288,8 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
   </div>
   <div class="ticker reveal">
     <div class="ticker-track">
-      <span><b>Campaign Strategy</b><i>◆</i><b>Digital Product Marketing</b><i>◆</i><b>Performance Reporting</b><i>◆</i><b>Content Production</b><i>◆</i><b>Internal Comms</b><i>◆</i><b>SME Acquisition</b><i>◆</i><b>Paid Social</b><i>◆</i></span>
-      <span><b>Campaign Strategy</b><i>◆</i><b>Digital Product Marketing</b><i>◆</i><b>Performance Reporting</b><i>◆</i><b>Content Production</b><i>◆</i><b>Internal Comms</b><i>◆</i><b>SME Acquisition</b><i>◆</i><b>Paid Social</b><i>◆</i></span>
+      <span><b>Campaign Strategy</b><i>◆</i><b>Digital Marketing</b><i>◆</i><b>Social Media Management</b><i>◆</i><b>Content Writing</b><i>◆</i><b>Email &amp; SMS Marketing</b><i>◆</i><b>Lead Generation</b><i>◆</i><b>Account Acquisition</b><i>◆</i><b>Event Management</b><i>◆</i><b>Performance Reporting</b><i>◆</i></span>
+      <span><b>Campaign Strategy</b><i>◆</i><b>Digital Marketing</b><i>◆</i><b>Social Media Management</b><i>◆</i><b>Content Writing</b><i>◆</i><b>Email &amp; SMS Marketing</b><i>◆</i><b>Lead Generation</b><i>◆</i><b>Account Acquisition</b><i>◆</i><b>Event Management</b><i>◆</i><b>Performance Reporting</b><i>◆</i></span>
     </div>
   </div>
 </header>
@@ -260,10 +298,10 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
   <div class="wrap">
     <div class="stats reveal">
       <div class="stats-grid">
-        <div class="stat"><div class="n"><em>4</em>M</div><div class="l">App migrations driven<br>in 3 months</div></div>
-        <div class="stat"><div class="n">4.8<em>M</em></div><div class="l">POS transactions from<br>one campaign</div></div>
+        <div class="stat"><div class="n"><em>5</em>+</div><div class="l">Years across fintech,<br>banking &amp; tech</div></div>
+        <div class="stat"><div class="n"><em>4</em>M+</div><div class="l">App migrations driven<br>in 3 months</div></div>
+        <div class="stat"><div class="n"><em>8</em>M+</div><div class="l">Combined POS transactions<br>across campaigns</div></div>
         <div class="stat"><div class="n">90<em>%</em></div><div class="l">Surge in platform<br>traffic</div></div>
-        <div class="stat"><div class="n">4<em>+</em></div><div class="l">Years across fintech,<br>banking &amp; tech</div></div>
       </div>
     </div>
   </div>
@@ -274,22 +312,26 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
     <div class="about-card reveal">
       <div class="avatar"><img src="avatar.jpg" alt="Omoniyi Praise" width="480" height="480"></div>
       <h3>Omoniyi Praise</h3>
-      <div class="titleline">Content &amp; Digital Marketing Strategist</div>
+      <div class="titleline">Content Writer &amp; Digital Marketing Strategist, ANIPR</div>
       <div class="about-meta">
-        <div class="row"><span>Focus</span><span>Fintech · Banking · Tech</span></div>
-        <div class="row"><span>Experience</span><span>4+ years</span></div>
+        <div class="row"><span>Focus</span><span>Content &amp; Channel Execution</span></div>
+        <div class="row"><span>Strength</span><span>Campaign Management, Start to Finish</span></div>
+        <div class="row"><span>Credentials</span><span>ANIPR, MBA in Marketing</span></div>
+        <div class="row"><span>Approach</span><span>Plan. Execute. Report. Improve.</span></div>
         <div class="row"><span>Base</span><span>Lagos, Nigeria</span></div>
-        <div class="row"><span>Worked with</span><span>Wema · ALAT · Simfy</span></div>
+        <div class="row"><span>Worked with</span><span>Wema · RIVO · Teksight</span></div>
       </div>
       <div class="skills">
         <span class="skill">GA4</span>
         <span class="skill">Meta Ads</span>
         <span class="skill">Meltwater</span>
         <span class="skill">Ahrefs</span>
+        <span class="skill">MoEngage</span>
         <span class="skill">SEO</span>
         <span class="skill">Campaign Strategy</span>
         <span class="skill">Copywriting</span>
-        <span class="skill">Email &amp; Automation</span>
+        <span class="skill">Lead Generation</span>
+        <span class="skill">Account Acquisition</span>
       </div>
     </div>
     <div class="about-prose reveal">
@@ -297,9 +339,16 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
         <span class="sec-num">01</span>
         <h2 class="sec-title">About</h2>
       </div>
-      <p>I'm a marketing and communications specialist who works at the seam between <em>brand and business</em> — where a campaign idea has to survive contact with a KPI.</p>
-      <p>Across 4+ years in fintech, banking and tech, I've marketed digital products to audiences as different as teenagers opening their first account and women running businesses out of Instagram DMs. I run the full arc: strategy, the content that carries it, and the reporting that proves whether it worked.</p>
-      <p>My work lives on the ALAT ecosystem — campaign strategy, performance reporting, internal comms and content production — but the method travels: <em>understand the audience, sharpen the positioning, ship, measure, adjust.</em></p>
+      <p>I don't just plan campaigns, I <em>run them</em>: from the idea on a whiteboard to the post that goes live, the email that gets opened, the event that goes off without a hitch.</p>
+      <p>I'm a content and digital marketing strategist with 5+ years of experience, an MBA in Marketing from Miva Open University, and ANIPR accreditation from the Nigerian Institute of Public Relations. My work sits at the point where a marketing idea has to become something real. I handle content strategy, social media, email and SMS marketing, and event management, then bring it all together through hands-on campaign execution, audience segmentation, and honest performance reporting on what actually moved the needle.</p>
+      <p>Across fintech, banking and tech, I've marketed digital products to audiences as different as teenagers opening their first account and women running businesses out of Instagram DMs, always working the same loop: <em>plan, execute, report, improve.</em></p>
+      <p>Alongside my client-side work, I bring agency experience from Teksight Media Agency, where I worked on brand and influencer campaigns for TECNO, Infinix and vivo, and contributed to the ideation behind the Lagos SDG initiative, giving me a feel for both sides of the brief: the client's KPI and the agency's creative.</p>
+      <div class="about-cards">
+        <div class="acard"><div class="al">Focus</div><div class="av">Content &amp; Channel Execution</div></div>
+        <div class="acard"><div class="al">Strength</div><div class="av">Campaign Management, Start to Finish</div></div>
+        <div class="acard"><div class="al">Credentials</div><div class="av">ANIPR, MBA in Marketing</div></div>
+        <div class="acard"><div class="al">Approach</div><div class="av">Plan. Execute. Report. Improve.</div></div>
+      </div>
     </div>
   </div>
 </section>
@@ -320,18 +369,18 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
           <span class="case-tag">Product Launch · Migration</span>
           <span class="case-role">Campaign lead · Comms · Content</span>
         </div>
-        <h3>ALAT: The Evolution — migrating a bank's entire app base</h3>
+        <h3>ALAT 2.0: The Evolution: migrating a bank's entire app base</h3>
         <div class="case-body">
           <div class="case-block">
             <h4>Challenge</h4>
-            <p>Wema Bank rebuilt ALAT from the ground up. The hard part wasn't the build — it was moving millions of existing customers onto the new app without losing them, and winning new users at the same time.</p>
+            <p>Wema Bank rebuilt ALAT from the ground up. The hard part wasn't the build: it was moving millions of existing customers onto the new app without churn, while acquiring new users at the same time.</p>
           </div>
           <div class="case-block">
             <h4>Approach</h4>
-            <p>Spearheaded the launch campaign for ALAT: The Evolution — integrated messaging across digital and traditional channels, built to make the migration feel like an upgrade worth making rather than a chore to endure.</p>
+            <p>Led the ALAT relaunch's go-to-market strategy, an integrated media mix across owned, earned and paid channels, positioned to make the migration read as an upgrade worth making rather than a chore to endure.</p>
           </div>
           <div class="case-results">
-            <div class="result-chip"><div class="rn"><em>4</em>M</div><div class="rl">Customer migrations in 3 months</div></div>
+            <div class="result-chip"><div class="rn"><em>4</em>M+</div><div class="rl">Customer migrations in 3 months</div></div>
             <div class="result-chip"><div class="rn"><em>1</em>M</div><div class="rl">New users in the same window</div></div>
             <div class="result-chip"><div class="rn">3</div><div class="rl">Months to full-scale migration</div></div>
           </div>
@@ -341,22 +390,22 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
       <!-- CASE 2 -->
       <article class="case reveal">
         <div class="case-top">
-          <span class="case-tag">Integrated Campaign · Engagement</span>
-          <span class="case-role">Campaign owner · Strategy · Content</span>
+          <span class="case-tag">Anniversary Campaign · Content &amp; Events</span>
+          <span class="case-role">Campaign originator · Content · Interviews · Event execution</span>
         </div>
-        <h3>Anniversary &amp; Hackaholics — turning brand moments into transactions</h3>
+        <h3>Wema at 80: "80 Days to 80"</h3>
         <div class="case-body">
           <div class="case-block">
             <h4>Challenge</h4>
-            <p>Brand campaigns are easy to run and hard to justify — the pressure was to make anniversary and innovation moments (Sounds of ALAT, ALAT Alumni, Hackaholics 2024) do real commercial work, not just earn applause.</p>
+            <p>An 80th anniversary is easy to reduce to a plaque and a party. The brief was to make eight decades of institutional history feel alive, credible, and worth a reader's time, then land it in a flagship event befitting the milestone.</p>
           </div>
           <div class="case-block">
             <h4>Approach</h4>
-            <p>Owned and planned these integrated campaigns end-to-end, tying storytelling to a transactional call to action and pushing for national reach across geo-political zones — so the emotion converted into POS activity and platform traffic.</p>
+            <p>Originated the "80 Days to 80" concept: 80 days of articles and blog content tracing the bank's growth, built on original interviews with past MDs, EDs, the chairman, staff and partners, and wrote a portion of that content myself. Carried the campaign through to the grand anniversary dinner, drafting the partner invitations, managing partner engagement, executing the event on the day, and writing scripts for the videographers covering it.</p>
           </div>
           <div class="case-results">
-            <div class="result-chip"><div class="rn">4.8<em>M</em>+</div><div class="rl">POS transactions (anniversary)</div></div>
-            <div class="result-chip"><div class="rn">3.4<em>M</em>+</div><div class="rl">POS transactions (Hackaholics)</div></div>
+            <div class="result-chip"><div class="rn">80</div><div class="rl">Days of original content</div></div>
+            <div class="result-chip"><div class="rn">4.8<em>M</em>+</div><div class="rl">POS transactions driven</div></div>
             <div class="result-chip"><div class="rn"><em>90</em>%</div><div class="rl">Surge in alat.ng traffic</div></div>
           </div>
         </div>
@@ -365,51 +414,150 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
       <!-- CASE 3 -->
       <article class="case reveal">
         <div class="case-top">
-          <span class="case-tag">Growth Marketing · Crypto</span>
-          <span class="case-role">Multi-channel · Paid media · Content</span>
+          <span class="case-tag">Tech Campaign · Innovation</span>
+          <span class="case-role">Campaign owner · Strategy · Content</span>
         </div>
-        <h3>Simfy — growing a crypto platform through clarity</h3>
+        <h3>Hackaholics: a tech campaign built to convert</h3>
         <div class="case-body">
           <div class="case-block">
             <h4>Challenge</h4>
-            <p>Crypto and digital-banking concepts intimidate the everyday user. Simfy needed active users, retention and conversions — which meant making a complex product feel simple enough to act on.</p>
+            <p>Hackaholics needed to stand on its own as a tech and innovation moment, not ride on the coattails of the bank's anniversary activity, while still driving measurable commercial results.</p>
           </div>
           <div class="case-block">
             <h4>Approach</h4>
-            <p>Ran multi-channel integrated campaigns — social, email, partnerships, in-app, and targeted Meta ads — while simplifying dense crypto ideas into push notifications, newsletters and blogs. Owned the content calendar and SEO-aligned pages, optimising continuously against KPIs.</p>
+            <p>Owned and planned the campaign end-to-end as a standalone innovation play, pairing tech-forward storytelling with a clear, transactional CTA and pushing for national reach across geo-political zones, so awareness converted into POS activity.</p>
           </div>
           <div class="case-results">
-            <div class="result-chip"><div class="rn"><em>30</em>%</div><div class="rl">Increase in active users</div></div>
-            <div class="result-chip"><div class="rn"><em>3</em>×</div><div class="rl">Higher engagement</div></div>
-            <div class="result-chip"><div class="rn"><em>35</em>%</div><div class="rl">Lift in click-through rate</div></div>
-            <div class="result-chip"><div class="rn"><em>40</em>%</div><div class="rl">Follower growth in 3 months</div></div>
+            <div class="result-chip"><div class="rn">3.4<em>M</em>+</div><div class="rl">POS transactions driven</div></div>
           </div>
         </div>
       </article>
 
+      <div class="reveal" style="border:1px solid var(--line);border-radius:16px;padding:24px 28px;background:rgba(255,255,255,.35)">
+        <div style="font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:10px">Also on the campaign calendar</div>
+        <p style="font-size:15px;color:#4A3B30;line-height:1.6;max-width:70ch"><strong style="color:var(--ink)">Sounds of ALAT</strong>, a separate campaign in its own right, with <strong style="color:var(--ink)">Wema at 79</strong> running as one of its sub-campaigns the year before the 80th anniversary. <strong style="color:var(--ink)">ALAT Alumni</strong> is a further initiative I've contributed to on the ALAT ecosystem.</p>
+      </div>
+
       <!-- CASE 4 -->
       <article class="case reveal">
         <div class="case-top">
-          <span class="case-tag">Brand · Financial Literacy</span>
-          <span class="case-role">Activation · Content · Comms</span>
+          <span class="case-tag">Growth Marketing · Crypto</span>
+          <span class="case-role">Multi-channel · Paid media · Content</span>
         </div>
-        <h3>Money Adventure — teaching a thousand kids about money</h3>
+        <h3>RIVO (Simfy): growing a crypto platform through clarity</h3>
         <div class="case-body">
           <div class="case-block">
             <h4>Challenge</h4>
-            <p>Financial literacy is hard to make exciting for children, and easy to reduce to a forgettable school visit. The brand needed an activation that actually landed with young students and produced content worth sharing.</p>
+            <p>Crypto and digital-banking concepts intimidate the everyday user. RIVO needed active-user growth, retention and conversion, which meant making a complex product feel simple enough to act on.</p>
           </div>
           <div class="case-block">
             <h4>Approach</h4>
-            <p>Executed the Money Adventure School Tour across six schools — designing financial-literacy activations and content that reached over a thousand students, turning a CSR obligation into a genuine brand moment. (I also led the internal comms behind Wema's Great Place to Work recognition.)</p>
+            <p>Ran integrated campaigns across social, email and in-app channels, plus influencer and partnership marketing, while simplifying dense crypto ideas into push notifications, newsletters and blog content, optimising the funnel at every touchpoint.</p>
           </div>
           <div class="case-results">
-            <div class="result-chip"><div class="rn">1,000<em>+</em></div><div class="rl">Students reached</div></div>
-            <div class="result-chip"><div class="rn">6</div><div class="rl">Schools on the tour</div></div>
-            <div class="result-chip"><div class="rn">1<em>st</em></div><div class="rl">Great Place to Work award (comms lead)</div></div>
+            <div class="result-chip"><div class="rn"><em>30</em>%</div><div class="rl">Growth in active users</div></div>
+            <div class="result-chip"><div class="rn"><em>25</em>%</div><div class="rl">Lift in conversions</div></div>
+            <div class="result-chip"><div class="rn"><em>20</em>%</div><div class="rl">More referral traffic</div></div>
           </div>
         </div>
       </article>
+
+      <!-- CASE 5 -->
+      <article class="case reveal">
+        <div class="case-top">
+          <span class="case-tag">Agency Experience · Influencer Marketing</span>
+          <span class="case-role">Teksight Media Agency · Campaigns · Content · Ideation</span>
+        </div>
+        <h3>TECNO, Infinix &amp; vivo: landing ambassador deals that moved product</h3>
+        <div class="case-body">
+          <div class="case-block">
+            <h4>Challenge</h4>
+            <p>Phone launches live or die on how fast they cut through: the brief was influencer marketing and launch content that everyday readers would actually read, trust and act on.</p>
+          </div>
+          <div class="case-block">
+            <h4>Approach</h4>
+            <p>On the agency side at Teksight Media Agency, ran influencer campaigns for TECNO, Infinix and vivo, including landing ambassador deals with Fireboy and Tiwa Savage, alongside phone launch content and product reviews written for a mass-market audience. Also contributed to the creative ideation behind the Lagos SDG initiative, applying the same audience-first thinking to a public-interest brief.</p>
+          </div>
+          <div class="case-results">
+            <div class="result-chip"><div class="rn">3</div><div class="rl">Device brands (TECNO, Infinix, vivo)</div></div>
+            <div class="result-chip"><div class="rn">2</div><div class="rl">Ambassador deals landed</div></div>
+            <div class="result-chip"><div class="rn">1</div><div class="rl">Lagos SDG ideation credit</div></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">Experience</h2>
+      <p class="sec-desc">What I've worked on, and how the role grew alongside it.</p>
+    </div>
+
+    <div class="timeline reveal">
+
+      <div class="tl-item current">
+        <div class="tl-dot"></div>
+        <div class="tl-head">
+          <div><span class="tl-role">Marketing &amp; Communications Specialist</span> &nbsp;<span class="tl-org">at Wema Bank</span></div>
+          <div class="tl-period">2022 – Present</div>
+        </div>
+        <p>Progressed from Content Writer into a full digital marketing and campaign role, working across the ALAT ecosystem.</p>
+        <div class="tl-sub">
+          <div class="tl-role-item">
+            <div class="trh"><span>Content Writer</span><span>2022 – 2023</span></div>
+            <p>Wrote content across campaigns and channels, building the foundation for Wema's brand voice.</p>
+          </div>
+          <div class="tl-role-item">
+            <div class="trh"><span>Reporting, Campaign Ideation &amp; Execution</span><span>2024</span></div>
+            <p>Took on campaign ideation and execution alongside performance reporting, moving from writing content to shaping and running the campaigns themselves.</p>
+          </div>
+          <div class="tl-role-item">
+            <div class="trh"><span>Digital Marketing, Social Media, Reporting &amp; Execution</span><span>2025 – Present</span></div>
+            <p>Expanded into full digital marketing and social media management on top of reporting and campaign work, leading major campaigns including Wema at 80 and ALAT 2.0, the ALAT relaunch (4M+ migrations), anniversary campaigns, and Hackaholics (8M+ combined POS transactions).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head">
+          <div><span class="tl-role">Marketing &amp; Communications Specialist</span> &nbsp;<span class="tl-org">at RIVO (Simfy), Remote</span></div>
+          <div class="tl-period">Sept 2024 – July 2025</div>
+        </div>
+        <p>Ran integrated campaigns across social, email, and in-app channels that grew active users by 30% and lifted conversion rate by 25%, plus influencer and partnership marketing that added 20% more referral traffic.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head">
+          <div><span class="tl-role">Content Writer</span> &nbsp;<span class="tl-org">at Ivy Arc (UK), Remote</span></div>
+          <div class="tl-period">Jan 2022 – Dec 2023</div>
+        </div>
+        <p>Wrote SEO-optimised blog and social content for a tech brand, and built out employer branding that helped position the company as an employer of choice.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head">
+          <div><span class="tl-role">Content Writer (Intern)</span> &nbsp;<span class="tl-org">at Teksight Media Agency, Hybrid</span></div>
+          <div class="tl-period">Feb – Oct 2022</div>
+        </div>
+        <p>My agency-side foundation: ran influencer campaigns for TECNO, Infinix, and vivo, including landing ambassador deals with Fireboy and Tiwa Savage, contributed to the creative ideation behind the Lagos SDG initiative, and wrote phone launch content and product reviews for a mass-market audience.</p>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head">
+          <div><span class="tl-role">Educational Content Writer (Intern)</span> &nbsp;<span class="tl-org">at Rise Networks</span></div>
+          <div class="tl-period">2021</div>
+        </div>
+        <p>Wrote educational content, marking the start of a content-writing career that grew into full-cycle marketing strategy.</p>
+      </div>
 
     </div>
   </div>
@@ -418,40 +566,87 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
 <section id="services">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">03</span>
+      <span class="sec-num">04</span>
       <h2 class="sec-title">What I do</h2>
-      <p class="sec-desc">Four practices that connect the brief to the number it's supposed to move.</p>
+      <p class="sec-desc">The full run, not just one piece of it.</p>
     </div>
     <div class="svc-grid reveal">
       <div class="svc">
-        <div class="svc-ix">S/01</div>
-        <h3>Campaign strategy</h3>
-        <p>Positioning, audience segmentation, channel mix and go-to-market — from competitive intelligence to a deck that gets buy-in and ships.</p>
+        <div class="svc-ix">01</div>
+        <h3>Content writing</h3>
+        <p>Words that sound like the brand and speak to the audience, not just filler between images.</p>
       </div>
       <div class="svc">
-        <div class="svc-ix">S/02</div>
-        <h3>Digital product marketing</h3>
-        <p>Launch and growth comms for digital products, tuned to each audience — teens, SMEs, women-led businesses, everyday users.</p>
+        <div class="svc-ix">02</div>
+        <h3>Social media management</h3>
+        <p>Day-to-day posting, engagement, and growth, keeping a brand's presence active and consistent.</p>
       </div>
       <div class="svc">
-        <div class="svc-ix">S/03</div>
-        <h3>Performance reporting</h3>
-        <p>Promise-vs-results scorecards, KPI tracking and analytical narrative — pulling Meltwater, GA4 and platform data into decisions.</p>
+        <div class="svc-ix">03</div>
+        <h3>Digital marketing</h3>
+        <p>Media mix planning and paid social that gets content and campaigns in front of the right audience segment, on the right channel.</p>
       </div>
       <div class="svc">
-        <div class="svc-ix">S/04</div>
-        <h3>Content production</h3>
-        <p>Campaign copy, editorial, flyers, scripts and decks — content built to be read, remembered and acted on.</p>
+        <div class="svc-ix">04</div>
+        <h3>Email marketing</h3>
+        <p>Segmented, automated campaigns in MoEngage built to be opened, read, and acted on, not deleted.</p>
       </div>
       <div class="svc">
-        <div class="svc-ix">S/05</div>
-        <h3>Internal communications</h3>
-        <p>Rally campaigns and enablement that get whole divisions moving toward a shared, measurable target.</p>
+        <div class="svc-ix">05</div>
+        <h3>SMS marketing</h3>
+        <p>Short, direct messages that reach people fast and drive action.</p>
       </div>
       <div class="svc">
-        <div class="svc-ix">S/06</div>
-        <h3>Brand &amp; comms</h3>
-        <p>Press-ready storytelling and brand messaging that expands reach and protects reputation across earned media.</p>
+        <div class="svc-ix">06</div>
+        <h3>Event management</h3>
+        <p>From the first planning call to the last guest leaving, coordinating the moving parts so nothing gets missed.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ix">07</div>
+        <h3>Campaign ideation &amp; execution</h3>
+        <p>Taking an idea and shaping it into a real, running campaign, from positioning and concept through go-to-market and launch.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ix">08</div>
+        <h3>Reporting &amp; performance analysis</h3>
+        <p>Tracking CAC, conversion rate, and engagement metrics to turn numbers into decisions for the next sprint.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ix">09</div>
+        <h3>Lead generation</h3>
+        <p>Building the top of the funnel: offers, landing pages and targeted outreach that turn cold audiences into qualified leads.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-ix">10</div>
+        <h3>Account acquisition</h3>
+        <p>Converting interest into opened accounts and activated users, then handing off a clean pipeline to retention.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">05</span>
+      <h2 class="sec-title">Credentials</h2>
+      <p class="sec-desc">Formal training behind the day-to-day work.</p>
+    </div>
+    <div class="cred-grid reveal">
+      <div class="cred">
+        <div class="cred-name">ANIPR</div>
+        <div class="cred-org">Associate, Nigerian Institute of Public Relations</div>
+        <div class="cred-year">June 2024</div>
+      </div>
+      <div class="cred">
+        <div class="cred-name">MBA in Marketing</div>
+        <div class="cred-org">Miva Open University</div>
+        <div class="cred-year">2026</div>
+      </div>
+      <div class="cred">
+        <div class="cred-name">B.Sc(Ed), Building Technology Education</div>
+        <div class="cred-org">University of Ilorin</div>
+        <div class="cred-year">2021</div>
       </div>
     </div>
   </div>
@@ -460,7 +655,7 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
 <section id="press">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-num">04</span>
+      <span class="sec-num">06</span>
       <h2 class="sec-title">In the press</h2>
       <p class="sec-desc">Selected campaigns and launches that earned national coverage.</p>
     </div>
@@ -482,7 +677,7 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
       </a>
       <a class="press" href="https://punchng.com/from-agbonmagbe-to-wema-bank-nigerias-fifth-oldest-bank-marks-79th-birthday/" target="_blank" rel="noopener">
         <div class="press-meta"><span class="src">Punch</span><span>·</span><span>2025</span></div>
-        <h4>From Agbonmagbe to Wema Bank — Nigeria's fifth-oldest bank marks a milestone</h4>
+        <h4>From Agbonmagbe to Wema Bank: Nigeria's fifth-oldest bank marks a milestone</h4>
         <span class="press-arrow">Read ↗</span>
       </a>
       <a class="press" href="https://www.thisdaylive.com/index.php/2025/02/11/wema-banks-transformational-journey-story-of-vision-resilience-and-innovation/" target="_blank" rel="noopener">
@@ -507,7 +702,7 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
       </a>
       <a class="press" href="https://thenationonlineng.net/the-scars-that-beautify-our-stories-by-wema-bank-80/" target="_blank" rel="noopener">
         <div class="press-meta"><span class="src">The Nation</span><span>·</span><span>2025</span></div>
-        <h4>"The scars that beautify our stories" — Wema Bank at 80</h4>
+        <h4>"The scars that beautify our stories": Wema Bank at 80</h4>
         <span class="press-arrow">Read ↗</span>
       </a>
       <a class="press" href="https://businessday.ng/companies/article/wema-bank-80-year-journey-of-transformation/" target="_blank" rel="noopener">
@@ -527,8 +722,9 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
 
 <section id="contact">
   <div class="wrap">
-    <div class="eyebrow reveal">Let's talk</div>
-    <h2 class="contact-h reveal">Got a product that needs a <em>strategy</em> and a story?</h2>
+    <div class="eyebrow reveal">Get in touch</div>
+    <h2 class="contact-h reveal">Have a <em>campaign</em> that needs running?</h2>
+    <p style="margin-top:20px;max-width:48ch;color:rgba(243,235,224,.7);font-size:1.05rem" class="reveal">Whether it's content, social, email, SMS, or an event, let's talk about what needs to get done.</p>
     <div class="contact-links reveal">
       <a class="clink primary" href="mailto:praiseoluwashetemi@gmail.com">Email me ↗</a>
       <a class="clink" href="tel:+2349077265216">Call ↗</a>
@@ -536,8 +732,8 @@ footer{border-top:1px solid rgba(243,235,224,.14);margin-top:80px;padding-top:32
       <a class="clink" href="Omoniyi_Praise_CV.pdf" target="_blank" rel="noopener">Download CV</a>
     </div>
     <footer>
-      <span>© 2026 Omoniyi Praise — Content &amp; Digital Marketing Strategist</span>
-      <span>Built to move numbers.</span>
+      <span>© 2026 Omoniyi Praise, Digital Marketing &amp; Campaign Manager, ANIPR</span>
+      <span>Plan. Execute. Report. Improve.</span>
     </footer>
   </div>
 </section>
